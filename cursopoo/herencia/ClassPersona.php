@@ -24,6 +24,8 @@
                 NOMBRE: {$this->strNombre} <br>
                 EDAD: {$this->intEdad} <br>
             ";
+
+            return $datos;
         }
 
     }//end class Persona
