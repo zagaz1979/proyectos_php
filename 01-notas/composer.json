@@ -1,0 +1,15 @@
+{
+    "name": "zagaz/notas",
+    "autoload": {
+        "psr-4": {
+            "Zagaz\\Notas\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Cesar",
+            "email": "cesar.garcia.suarez@gmail.com"
+        }
+    ],
+    "require": {}
+}
