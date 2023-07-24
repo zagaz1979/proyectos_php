@@ -1,11 +1,12 @@
 <?php
 
-    class Persona{
+    abstract class Persona{
 
         //Definir las propiedades
         public $intDpi;
         public $strNombre;
         public $intEdad;
+        public $mensaje;
 
         //Definir el método constructor
         function __construct(int $dpi, string $nombre, int $edad)
@@ -16,17 +17,9 @@
         }
 
         //Método para mostrar información de la persona
-        public function getDatosPersonales()
-        {
-            $datos = "
-                <h2>Datos personales</h2>
-                DPI: {$this->intDpi} <br>
-                NOMBRE: {$this->strNombre} <br>
-                EDAD: {$this->intEdad} <br>
-            ";
-
-            return $datos;
-        }
+        abstract public function getDatosPersonales();
+        abstract public function setMensaje(string $mensaje);
+        abstract public function getMensaje(): string;
 
     }//end class Persona
 
