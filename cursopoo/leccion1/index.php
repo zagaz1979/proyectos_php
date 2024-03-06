@@ -30,8 +30,6 @@
     echo "<br>";
     echo "<br>";
 
-
-
     //Utilizamos un metodos
     $totalSuma2 = $operacion2->getSuma();
     //Visualizar en pantalla el resultado
@@ -53,5 +51,4 @@
     echo "Total División:" . $totalDivision2;
     echo "<br>";
 
- 
 ?>
