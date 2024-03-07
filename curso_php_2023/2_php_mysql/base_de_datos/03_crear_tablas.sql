@@ -8,14 +8,14 @@ create table usuarios
     u_usuario varchar(20) not null,
     u_clave varchar(200) not null,
     u_email varchar(70) not null
-);
+)engine=innodb;
 
 create table categoria
 (
     c_id int(7) not null auto_increment primary key,
     c_nombre varchar(50) not null,
     c_ubicacion varchar(150) not null
-);
+)engine=innodb;
 
 create table producto 
 (
@@ -27,4 +27,4 @@ create table producto
     p_foto varchar(500) not null,
     p_categoria_id int(7) not null,
     p_usuario_id int(10) not null
-);
+)engine=innodb;
