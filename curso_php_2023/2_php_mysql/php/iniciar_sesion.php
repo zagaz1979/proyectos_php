@@ -49,6 +49,8 @@
             $_SESSION['apellido'] = $check_user['u_apellido'];
             $_SESSION['usuario'] = $check_user['u_usuario'];
 
+            //echo "Hoal: " . $_SESSION['nombre'];
+
             if (headers_sent()) {
                 echo "<script> window.location.href='index.php?vista=home'; </script>";
             } else {

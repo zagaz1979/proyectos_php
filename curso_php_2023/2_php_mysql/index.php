@@ -1,8 +1,15 @@
-<?php require "./inc/session_start.php"; ?>
+<?php 
+    require "./inc/sesion.php"; 
+    //require_once "./php/funcion_sesion.php";
+    //verificar_sesion();
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <?php include "./inc/head.php"; ?>
+    <?php 
+        include "./inc/head.php"; 
+    ?>
 </head>
 <body>
     <?php 
@@ -14,22 +21,13 @@
         if (is_file("./vistas/".$_GET['vista'].".php") && $_GET['vista'] != "" && $_GET['vista'] != "404" ) {            
             
             /*
-            # Cerrar la sesion
-            if ( (!isset($_SESSION['id']) || $_SESSION['id'] == "") || (!isset($_SESSION['usuario']) || $_SESSION['usuario'] == "") ) {
+            if (!isset($_SESSION['id']) || empty($_SESSION['id']) || !isset($_SESSION['usuario']) || empty($_SESSION['usuario'])) {
                 include "./vistas/logout.php";
-                //echo "hola";
+                exit;
             }
             */
-
-            if ( !isset($_SESSION['id']) || $_SESSION['id'] == "" ) {
-                if (headers_sent()) {
-                    echo "<script> window.location.href='index.php?vista=login'; </script>";
-                } else {
-                    header("Location: index.php?vista=login");
-                }
-            }
-
             
+                        
             include "./inc/navbar.php"; 
             include "./vistas/".$_GET['vista'].".php";
             include "./inc/script.php"; 

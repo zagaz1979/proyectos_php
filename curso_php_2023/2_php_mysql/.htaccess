@@ -1,0 +1,15 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # Permite el acceso a la página de inicio
+    RewriteRule ^index\.php$ - [L]
+
+    # Permite el acceso a la página de inicio de sesión
+    RewriteRule ^vistas/login\.php$ - [L]
+
+    # Para todas las demás páginas en la carpeta "vistas", redirige a la página de inicio de sesión
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^vistas/.*$ /index.php [L]
+</IfModule>

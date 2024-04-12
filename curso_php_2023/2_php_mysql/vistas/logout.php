@@ -6,3 +6,5 @@ if (headers_sent()) {
 } else {
     header("Location: index.php?vista=login");
 }
+
+exit;
