@@ -5,7 +5,7 @@
 
     //Creamos un objeto con una instancia de la clase ClassOperacion
     $operacion1 = new Operacion(10,7);
-    $operacion2 = new Operacion(10,5);
+    $operacion2 = new Operacion(100,3);
 
     //Utilizamos un metodos
     $totalSuma = $operacion1->getSuma();
